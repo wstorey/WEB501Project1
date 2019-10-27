@@ -13,9 +13,9 @@ function css() {
     .pipe(dest('prod/ui'));
 }
 
-// function image() {
-//     return src(['source/images/**/*.jpg', 'source/images/**/*.png']).pipe(dest('prod/images'));
-// }
+function image() {
+    return src(['source/images/**/*.jpg', 'source/images/**/*.png']).pipe(dest('prod/ui/images'));
+}
 
 function md() {
     return src('source/md/**/*.md')
@@ -39,10 +39,13 @@ function reload(cb) {
 
 function watch_task() {
     watch('source/scss/**/*.scss', series(css, reload));
+    watch('source/md/**/*.md', series(md, reload));
+    watch('source/templates/layout.html', series(md, reload));
+    watch('source/images/**/*', series(image, reload))
 }
 
 function clean(cb) {
     del(['prod/**/*'], cb);
 }
 
-exports.default = series(clean, parallel(css, md), sync, watch_task)
+exports.default = series(clean, parallel(css, md, image), sync, watch_task)

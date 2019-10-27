@@ -1,3 +1,72 @@
-body {
-    background: blue;
+$font-stack: Helvetica, sans-serif;
+$heading-color: rgb(123, 80, 255);
+$link-color: rgb(12, 67, 129);
+$footerSpace: calc(100vh - 550px);
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: $font-stack;
+}
+
+header {
+    ul {
+        display: block;
+        background: rgba(198, 46, 23, 0.1);
+        padding: 15px;
+        li {
+            list-style-type: none;
+            display: inline;
+            padding-right: 10px;
+            &:first-of-type {
+                font-weight: bold;
+                font-size: 1.2rem;
+            }
+            a {
+                text-decoration: none;
+                color: $link-color;
+                &:hover {
+                    color: rgb(17, 120, 238)
+                }
+            }
+        }
+    }
+    h1 {
+        color: $heading-color;
+        margin: 2rem 0 2rem 0.5rem;
+    }
+}
+
+section#homeSection {
+    height: 75vh;
+    font-size: 1.2rem;
+    background-image: url('images/keyboard.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    
+    // width: 100vw;
+    // img {
+    //     height: 100vh;
+    // }
+}
+
+section#productSection {
+    margin: 0 5rem;
+    min-height: 100%;
+    display: grid;
+    grid-column-gap: 25px;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto auto auto;
+    p {
+        // grid-area: item1;
+        img {
+            width: 80%;
+        }
+    }
+}
+
+footer {
+    text-align: center;
 }
