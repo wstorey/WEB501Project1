@@ -1,6 +1,6 @@
 ---
-title: Products
-heading: Products
+title: Keyboards
+heading: Keyboards
 sectionId: productSection
 ---
 ![keyboard](ui/images/duckyshine7.jpg)
