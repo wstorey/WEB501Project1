@@ -2,6 +2,8 @@ const { src, dest, watch, parallel, series } = require('gulp');
 const sass = require('gulp-sass');
 const browserSync = require('browser-sync').create();
 const del = require('delete');
+const concat = require('gulp-concat');
+const terser = require('gulp-terser');
 const typescript = require('gulp-typescript');
 const markdown = require('gulp-markdown');
 const wrap = require('gulp-wrap');
@@ -26,8 +28,10 @@ function md() {
 }
 
 function ts() {
-    return src('source/ts/**/*.ts')
+    return src(['source/lib/jquery.js', 'source/ts/**/*.ts'])
     .pipe(typescript({ target: 'ES6', allowJs: true }))
+    .pipe(terser())
+    .pipe(concat('main.js'))
     .pipe(dest('prod/ui'));
 }
 

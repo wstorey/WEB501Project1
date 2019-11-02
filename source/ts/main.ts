@@ -1,7 +1,10 @@
 let itemsInCart:number = 0;
-let total:any = document.querySelector('#total');
-document.querySelector('#productSection p a').addEventListener('click', () => {
+let total:HTMLDivElement = document.querySelector('#total');
+let $buttons:any = $('#productSection p a')
+
+$buttons.on('click', () => {
     itemsInCart++;
-    total.textContent('(' + itemsInCart + ')');
+    total.textContent = '(' + itemsInCart + ')';
     console.log(itemsInCart);
 });
+
