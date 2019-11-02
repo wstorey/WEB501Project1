@@ -64,7 +64,7 @@ section#homeSection {
     }
 }
 
-// Product Section Styles
+// Keyboards & Keycaps Section Styles
 section#productSection {
     margin: 0 5rem;
     min-height: 100%;
@@ -86,6 +86,29 @@ section#productSection {
             color: white;
             padding: 5px;
             border-radius: 5px;
+        }
+    }
+}
+
+//Shipping Table Styles
+#shippingSection {
+    padding-bottom: 20vh;
+    p {
+        padding: 0 0 1rem 10px;
+    }
+    table {
+        border-collapse: collapse;
+        width: 50%;
+        margin-left: 5px;
+        td, th {
+            border: 1px solid grey;
+            padding: 5px;
+        }
+        th {
+            text-align: left;
+            background: $header-background;
+            padding-top: 10px;
+            padding-bottom: 10px;
         }
     }
 }
