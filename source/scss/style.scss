@@ -1,6 +1,6 @@
 $font-stack: Helvetica, sans-serif;
 $heading-color: rgb(123, 80, 255);
-$link-color: rgb(12, 67, 129);
+$link-hover-color: rgb(12, 67, 129);
 $footerSpace: calc(100vh - 550px);
 
 * {
@@ -12,7 +12,7 @@ $footerSpace: calc(100vh - 550px);
 header {
     ul {
         display: block;
-        background: rgba(177, 24, 156, 0.1);
+        background: rgba(177, 24, 157, 0.247);
         padding: 15px;
         li {
             list-style-type: none;
@@ -24,9 +24,10 @@ header {
             }
             a {
                 text-decoration: none;
-                color: $link-color;
+                color: rgba(0, 0, 0, 0.8);
                 &:hover {
-                    color: rgb(17, 120, 238)
+                    // color: rgb(17, 120, 238);
+                    color: $link-hover-color;
                 }
             }
         }
@@ -54,13 +55,16 @@ section#homeSection {
 section#productSection {
     margin: 0 5rem;
     min-height: 100%;
+    padding-bottom: 15vh;
     display: grid;
     grid-column-gap: 25px;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows: auto auto auto auto;
     p {
+        line-height: 1.5rem;
         padding-bottom: 10px;
         img {
+            padding-bottom: 10px;
             width: 80%;
             display: block;
         }
@@ -71,5 +75,31 @@ footer {
     text-align: center;
     p {
         margin-bottom: 15px;
+    }
+}
+
+@media only screen and (max-width: 1000px) {
+    section#productSection {
+        padding-bottom: 10px;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto;
+        p {
+            img {
+                width: 100%;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 700px) {
+    section#productSection {
+        padding-bottom: 10px;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        p {
+            img {
+                width: 100%;
+            }
+        }
     }
 }
