@@ -25,6 +25,12 @@ function md() {
     .pipe(dest('prod/'));
 }
 
+function ts() {
+    return src('source/ts/**/*.ts')
+    .pipe(typescript({ target: 'ES6', allowJs: true }))
+    .pipe(dest('prod/ui'));
+}
+
 function sync(cb) {
     browserSync.init({
         server: { baseDir: 'prod' }
@@ -40,6 +46,7 @@ function reload(cb) {
 function watch_task() {
     watch('source/scss/**/*.scss', series(css, reload));
     watch('source/md/**/*.md', series(md, reload));
+    watch('source/ts/**/*.ts', series(ts, reload));
     watch('source/templates/layout.html', series(md, reload));
     watch('source/images/**/*', series(image, reload))
 }
@@ -48,4 +55,4 @@ function clean(cb) {
     del(['prod/**/*'], cb);
 }
 
-exports.default = series(clean, parallel(css, md, image), sync, watch_task)
+exports.default = series(clean, parallel(css, md, ts, image), sync, watch_task)
