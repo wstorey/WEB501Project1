@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>${file.frontMatter.title}</title>
+    <title>Shipping</title>
     <link href="ui/style.css" rel="stylesheet"/>
     <!-- <script src="ui/jquery.js" defer></script> -->
     <script src="ui/main.js" defer></script>
@@ -18,10 +18,60 @@
             <li><a href="shipping.html">Shipping</a></li>
             <li><a href="#">Cart <div id="total">(0)</div></a></li>
         </ul>
-        <h1>${file.frontMatter.heading}</h1>
+        <h1>Shipping</h1>
     </header>
-    <section id="${file.frontMatter.sectionId}">
-        ${contents}
+    <section id="shippingSection">
+        <p><em>Please see below for shipping estimates</em></p>
+<table>
+<thead>
+<tr>
+<th>Shipping To</th>
+<th>Price</th>
+<th>Estimated Delivery Time</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Canada</td>
+<td>$4.50</td>
+<td>2-3 days</td>
+</tr>
+<tr>
+<td>U.S.A.</td>
+<td>$6.50</td>
+<td>3-5 days</td>
+</tr>
+<tr>
+<td>Mexico</td>
+<td>$7.50</td>
+<td>5-7 days</td>
+</tr>
+<tr>
+<td>South America</td>
+<td>$9.00</td>
+<td>7-10 days</td>
+</tr>
+<tr>
+<td>Europe</td>
+<td>$11.00</td>
+<td>8-15 days</td>
+</tr>
+<tr>
+<td>Asia</td>
+<td>$20.00</td>
+<td>10-15 days</td>
+</tr>
+<tr>
+<td>Africa</td>
+<td>$20.00</td>
+<td>15-20 days</td>
+</tr>
+<tr>
+<td>Australia</td>
+<td>$15.00</td>
+<td>15-20 days</td>
+</tr>
+</tbody></table>
+
     </section>
     <footer>
         <p>&copy; 2019 - Will Storey</p>
