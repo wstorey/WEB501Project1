@@ -1,9 +1,11 @@
 # WEB501Project1
 ## Project 1 for WEB501 - JavaScript IV
 
-A website for a fictitious business with two Markdown pages, SCSS & TypeScript. The project will include a Gulp file to watch for file changes and refresh the browser showing the changes.
+A website for a fictitious business called __Keys &amp; Boards Galore__. It features four Markdown pages, sass &amp; TypeScript. The project will include a Gulp file to convert the files into HTML, CSS &amp; JavaScript respectively. It will also watch for file changes and refresh the browser to then show the changes.
 
-The website is for a keyboard store with an index, product pages for keyboards & keycaps as well as a page containing shipping information.
+Keys &amp; Boards Galore is composed of an index, product pages for keyboards & keycaps as well as a page containing shipping information.
+
+## Features
 
 ### Images
 ##### Hero Image by 
